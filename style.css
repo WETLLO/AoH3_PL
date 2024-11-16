@@ -12,26 +12,27 @@ body {
     line-height: 1.6;
     text-align: center;
     height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 
 /* Kontener strony */
 .container {
-    max-width: 1000px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
     padding: 20px;
 }
 
-/* Nawigacja */
+/* Nawigacja - zakładki po prawej stronie */
 .navbar {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 20px;
+    position: sticky;
+    top: 20px;
+    width: 200px;
     background-color: rgba(0, 0, 0, 0.6);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .navbar a {
@@ -40,11 +41,19 @@ body {
     font-size: 1.2rem;
     padding: 10px 20px;
     border-radius: 5px;
+    display: block;
+    margin: 10px 0;
     transition: background-color 0.3s ease;
 }
 
 .navbar a:hover {
     background-color: #FF8C00;
+}
+
+/* Główna zawartość */
+.main-content {
+    flex: 1;
+    padding: 20px;
 }
 
 /* Nagłówek */
