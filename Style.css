@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tło strony */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #1f1c2c, #928DAB);
+    color: white;
+    line-height: 1.6;
+    text-align: center;
+    height: 100vh;
+}
+
+/* Kontener strony */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Nagłówek */
+header {
+    margin-top: 50px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #FF8C00;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Przyciski i CTA */
+.cta {
+    margin-top: 60px;
+}
+
+.cta h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.2rem;
+}
+
+.join-button {
+    background-color: #7289DA;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.join-button:hover {
+    background-color: #5e6dff;
+}
+
+/* Strzałki */
+.arrow {
+    font-size: 3rem;
+    margin-top: 20px;
+    color: #FF8C00;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Sekcja z cechami */
+.content {
+    margin: 40px 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #FF8C00;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.feature {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    transition: transform 0.3s ease;
+}
+
+.feature h3 {
+    font-size: 1.8rem;
+    color: #FF8C00;
+}
+
+.feature p {
+    font-size: 1rem;
+}
+
+.feature:hover {
+    transform: scale(1.1);
+}
+
+/* Informacja o konkursie */
+.contest-info {
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contest-info h3 {
+    font-size: 2rem;
+    color: #FF8C00;
+}
+
+.contest-info p {
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* Sekcja nowych cech */
+.extra-features {
+    margin-top: 40px;
+}
+
+.extra-features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #FF8C00;
+}
+
+.extra-features .feature {
+    width: 30%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.extra-features .feature h3 {
+    font-size: 1.8rem;
+    color: #FF8C00;
+}
+
+.extra-features .feature p {
+    font-size: 1rem;
+}
+
+.extra-features .feature:hover {
+    transform: scale(1.1);
+}
+
+/* Stopka */
+footer {
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #ddd;
+}
