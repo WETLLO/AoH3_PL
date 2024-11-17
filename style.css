@@ -12,18 +12,57 @@ body {
     line-height: 1.6;
     text-align: center;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Dodano: zapewnia, że wszystko będzie układać się w pionie */
 }
 
 /* Kontener strony */
 .container {
-    max-width: 1000px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start; /* Zmiana na flex-start, aby elementy były ustawione pionowo */
+    align-items: flex-start; /* Zmiana na flex-start, aby kontener nie rozciągał się w poziomie */
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    flex-direction: column; /* Zmiana: sprawia, że główna treść układa się w pionie */
+}
+
+/* Nawigacja - zakładki po prawej stronie */
+.navbar {
+    position: sticky;
+    top: 20px;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 20px; /* Dodano: dodaje przestrzeń między zakładkami a treścią */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: block;
+    margin: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #FF8C00;
+}
+
+/* Główna zawartość */
+.main-content {
+    flex: 1;
     padding: 20px;
 }
 
 /* Nagłówek */
 header {
-    margin-top: 50px;
+    margin-top: 120px; /* Przestrzeń pod nawigacją */
 }
 
 header h1 {
@@ -36,37 +75,9 @@ header p {
     font-size: 1.2rem;
 }
 
-/* Sekcja z zakładkami */
-.navbar {
-    margin-top: 20px;
-}
-
-.navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.navbar ul li {
-    font-size: 1.2rem;
-}
-
-.navbar ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.navbar ul li a:hover {
-    background-color: #FF8C00;
-}
-
 /* Przyciski i CTA */
 .cta {
-    margin-top: 60px;
+    margin-top: 100px;
 }
 
 .cta h2 {
@@ -120,6 +131,33 @@ h2 {
     color: #FF8C00;
 }
 
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.feature {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    transition: transform 0.3s ease;
+}
+
+.feature h3 {
+    font-size: 1.8rem;
+    color: #FF8C00;
+}
+
+.feature p {
+    font-size: 1rem;
+}
+
+.feature:hover {
+    transform: scale(1.1);
+}
+
 /* Informacja o konkursie */
 .contest-info {
     margin-top: 50px;
@@ -138,7 +176,7 @@ h2 {
     color: white;
 }
 
-/* Nowe cechy */
+/* Sekcja nowych cech */
 .extra-features {
     margin-top: 40px;
 }
@@ -146,7 +184,7 @@ h2 {
 .extra-features h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #FF8C00;
+    color: #FF800;
 }
 
 .extra-features .feature {
@@ -176,4 +214,9 @@ footer {
     margin-top: 50px;
     font-size: 0.9rem;
     color: #ddd;
+}
+
+/* Dodatkowe style dla nagłówków */
+h2, h3 {
+    color: #FF8C00;
 }
