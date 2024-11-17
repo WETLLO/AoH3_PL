@@ -1,3 +1,4 @@
+/* Resetowanie domyślnych marginesów i paddingów */
 * {
     margin: 0;
     padding: 0;
@@ -11,60 +12,38 @@ body {
     color: white;
     line-height: 1.6;
     text-align: center;
-    height: 100vh;
+}
+
+/* Nawigacja */
+.navbar {
+    background-color: #333;
+    padding: 10px 0;
     display: flex;
     justify-content: center;
-    flex-direction: column; /* Dodano: zapewnia, że wszystko będzie układać się w pionie */
-}
-
-/* Kontener strony */
-.container {
-    display: flex;
-    justify-content: flex-start; /* Zmiana na flex-start, aby elementy były ustawione pionowo */
-    align-items: flex-start; /* Zmiana na flex-start, aby kontener nie rozciągał się w poziomie */
-    max-width: 1200px;
-    width: 100%;
-    padding: 20px;
-    flex-direction: column; /* Zmiana: sprawia, że główna treść układa się w pionie */
-}
-
-/* Nawigacja - zakładki po prawej stronie */
-.navbar {
-    position: sticky;
-    top: 20px;
-    width: 200px;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    border-radius: 10px;
-    margin-left: 20px; /* Dodano: dodaje przestrzeń między zakładkami a treścią */
+    gap: 20px;
+    font-size: 1.2rem;
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
     padding: 10px 20px;
     border-radius: 5px;
-    display: block;
-    margin: 10px 0;
     transition: background-color 0.3s ease;
 }
 
 .navbar a:hover {
-    background-color: #FF8C00;
+    background-color: #5e6dff;
 }
 
-/* Główna zawartość */
-.main-content {
-    flex: 1;
+/* Kontener strony */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
     padding: 20px;
 }
 
 /* Nagłówek */
-header {
-    margin-top: 120px; /* Przestrzeń pod nawigacją */
-}
-
 header h1 {
     font-size: 3rem;
     margin-bottom: 10px;
@@ -75,59 +54,10 @@ header p {
     font-size: 1.2rem;
 }
 
-/* Przyciski i CTA */
-.cta {
-    margin-top: 100px;
-}
-
-.cta h2 {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
-}
-
-.cta p {
-    font-size: 1.2rem;
-}
-
-.join-button {
-    background-color: #7289DA;
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.5rem;
-    text-decoration: none;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.join-button:hover {
-    background-color: #5e6dff;
-}
-
-/* Strzałki */
-.arrow {
-    font-size: 3rem;
-    margin-top: 20px;
-    color: #FF8C00;
-    animation: bounce 1s infinite;
-}
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-/* Sekcja z cechami */
-.content {
-    margin: 40px 0;
-}
-
-h2 {
+/* Cechy serwera */
+.content h2 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: #FF8C00;
 }
 
@@ -158,65 +88,9 @@ h2 {
     transform: scale(1.1);
 }
 
-/* Informacja o konkursie */
-.contest-info {
-    margin-top: 50px;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.contest-info h3 {
-    font-size: 2rem;
-    color: #FF8C00;
-}
-
-.contest-info p {
-    font-size: 1.2rem;
-    color: white;
-}
-
-/* Sekcja nowych cech */
-.extra-features {
-    margin-top: 40px;
-}
-
-.extra-features h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #FF800;
-}
-
-.extra-features .feature {
-    width: 30%;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    margin: 10px;
-    transition: transform 0.3s ease;
-}
-
-.extra-features .feature h3 {
-    font-size: 1.8rem;
-    color: #FF8C00;
-}
-
-.extra-features .feature p {
-    font-size: 1rem;
-}
-
-.extra-features .feature:hover {
-    transform: scale(1.1);
-}
-
 /* Stopka */
 footer {
     margin-top: 50px;
     font-size: 0.9rem;
     color: #ddd;
-}
-
-/* Dodatkowe style dla nagłówków */
-h2, h3 {
-    color: #FF8C00;
 }
