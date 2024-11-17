@@ -1,86 +1,209 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dołącz do Nas na Discordzie!</title>
-    <link rel="stylesheet" href="style.css"> <!-- Łączenie pliku CSS -->
-</head>
-<body>
-    <!-- Nawigacja -->
-    <nav class="navbar">
-        <a href="serwer_info.html">O serwerze</a>
-        <a href="rekrutacja.html">Rekrutacja</a>
-        <a href="https://discord.gg/aoh3" target="_blank">Link</a>
-    </nav>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <div class="container">
-        <!-- Pierwszy przycisk dołącz na samej górze -->
-        <div class="cta">
-            <a href="https://discord.gg/aoh3" class="join-button">Dołącz do Discorda</a>
-        </div>
+/* Tło strony */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #1f1c2c, #928DAB);
+    color: white;
+    line-height: 1.6;
+    text-align: center;
+    height: 100vh;
+}
 
-        <!-- Strzałka wskazująca drugi przycisk -->
-        <div class="arrow">↓</div>
+/* Kontener strony */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
-        <header>
-            <h1>Witaj w naszej Społeczności!</h1>
-            <p>Dołącz do nas na Discordzie i bądź częścią czegoś wyjątkowego!</p>
-        </header>
+/* Nawigacja */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
 
-        <section class="content">
-            <h2>Dlaczego warto dołączyć?</h2>
-            <div class="features">
-                <div class="feature">
-                    <h3>🎮 Rozgrywka i zabawa</h3>
-                    <p>Dołącz do nas, aby spotkać graczy, którzy uwielbiają zabawę i wspólne granie.</p>
-                </div>
-                <div class="feature">
-                    <h3>💬 Ciekawa społeczność</h3>
-                    <p>Nasza społeczność jest przyjazna i otwarta na nowe osoby.</p>
-                </div>
-                <div class="feature">
-                    <h3>🎉 Wydarzenia i konkursy</h3>
-                    <p>Organizujemy regularne wydarzenia i konkursy z nagrodami!</p>
-                </div>
-            </div>
-        </section>
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
 
-        <!-- Informacja o trwającym konkursie i grach strategicznych -->
-        <section class="contest-info">
-            <h3>🕹️ Konkurs na grę Total Tank Simulator!</h3>
-            <p>Dołącz do naszego serwera, bierz udział w konkursie, gdzie do wygrania jest kopia gry <strong>Total Tank Simulator</strong>! A jeśli kochasz gry strategiczne, znajdziesz tu również innych fanów takich tytułów jak <strong>Age of History 3</strong> i wielu innych!</p>
-        </section>
+.navbar a:hover {
+    background-color: #FF8C00;
+}
 
-        <!-- Nowa sekcja z dodatkowymi cechami -->
-        <section class="extra-features">
-            <h2>Co jeszcze oferujemy?</h2>
-            <div class="features">
-                <div class="feature">
-                    <h3>🔑 Poszukujemy Aktywnej Administracji</h3>
-                    <p>Jeśli masz doświadczenie w zarządzaniu serwerem i chcesz pomóc w jego rozwoju, szukamy Ciebie! Dołącz do nas i pomagaj kształtować naszą społeczność.</p>
-                </div>
-                <div class="feature">
-                    <h3>🌍 Aktywna Społeczność</h3>
-                    <p>Nasza społeczność jest bardzo aktywna! Dołącz do graczy z całej Polski, dziel się doświadczeniami i poznawaj nowych przyjaciół.</p>
-                </div>
-                <div class="feature">
-                    <h3>🎧 Głosowe kanały do gry</h3>
-                    <p>Nasze serwery głosowe to idealne miejsce do rozmów i wspólnej zabawy podczas grania. Zawsze znajdziesz kogoś do pogadania!</p>
-                </div>
-            </div>
-        </section>
+/* Nagłówek */
+header {
+    margin-top: 120px; /* Przestrzeń pod nawigacją */
+}
 
-        <!-- Call to Action (CTA) z przyciskiem -->
-        <section class="cta">
-            <h2>Dołącz do Nas na Discordzie!</h2>
-            <p>Nie czekaj, kliknij poniższy przycisk i stań się częścią naszej społeczności!</p>
-            <a href="https://discord.gg/aoh3" class="join-button">Dołącz do Discorda</a>
-        </section>
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #FF8C00;
+}
 
-        <footer>
-            <p>&copy; 2024 Nasza Społeczność</p>
-        </footer>
-    </div>
-</body>
-</html>
+header p {
+    font-size: 1.2rem;
+}
+
+/* Przyciski i CTA */
+.cta {
+    margin-top: 60px;
+}
+
+.cta h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.2rem;
+}
+
+.join-button {
+    background-color: #7289DA;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.join-button:hover {
+    background-color: #5e6dff;
+}
+
+/* Strzałki */
+.arrow {
+    font-size: 3rem;
+    margin-top: 20px;
+    color: #FF8C00;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Sekcja z cechami */
+.content {
+    margin: 40px 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #FF8C00;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.feature {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    transition: transform 0.3s ease;
+}
+
+.feature h3 {
+    font-size: 1.8rem;
+    color: #FF8C00;
+}
+
+.feature p {
+    font-size: 1rem;
+}
+
+.feature:hover {
+    transform: scale(1.1);
+}
+
+/* Informacja o konkursie */
+.contest-info {
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contest-info h3 {
+    font-size: 2rem;
+    color: #FF8C00;
+}
+
+.contest-info p {
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* Sekcja nowych cech */
+.extra-features {
+    margin-top: 40px;
+}
+
+.extra-features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #FF8C00;
+}
+
+.extra-features .feature {
+    width: 30%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.extra-features .feature h3 {
+    font-size: 1.8rem;
+    color: #FF8C00;
+}
+
+.extra-features .feature p {
+    font-size: 1rem;
+}
+
+.extra-features .feature:hover {
+    transform: scale(1.1);
+}
+
+/* Stopka */
+footer {
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+/* Dodatkowe style dla nagłówków */
+h2, h3 {
+    color: #FF8C00;
+}
