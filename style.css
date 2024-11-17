@@ -21,35 +21,9 @@ body {
     padding: 20px;
 }
 
-/* Nawigacja */
-.navbar {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.6);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.navbar a:hover {
-    background-color: #FF8C00;
-}
-
 /* Nagłówek */
 header {
-    margin-top: 120px; /* Przestrzeń pod nawigacją */
+    margin-top: 50px;
 }
 
 header h1 {
@@ -60,6 +34,34 @@ header h1 {
 
 header p {
     font-size: 1.2rem;
+}
+
+/* Sekcja z zakładkami */
+.navbar {
+    margin-top: 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar ul li {
+    font-size: 1.2rem;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #FF8C00;
 }
 
 /* Przyciski i CTA */
@@ -118,33 +120,6 @@ h2 {
     color: #FF8C00;
 }
 
-.features {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.feature {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 20px;
-    border-radius: 10px;
-    width: 30%;
-    transition: transform 0.3s ease;
-}
-
-.feature h3 {
-    font-size: 1.8rem;
-    color: #FF8C00;
-}
-
-.feature p {
-    font-size: 1rem;
-}
-
-.feature:hover {
-    transform: scale(1.1);
-}
-
 /* Informacja o konkursie */
 .contest-info {
     margin-top: 50px;
@@ -163,7 +138,7 @@ h2 {
     color: white;
 }
 
-/* Sekcja nowych cech */
+/* Nowe cechy */
 .extra-features {
     margin-top: 40px;
 }
@@ -201,9 +176,4 @@ footer {
     margin-top: 50px;
     font-size: 0.9rem;
     color: #ddd;
-}
-
-/* Dodatkowe style dla nagłówków */
-h2, h3 {
-    color: #FF8C00;
 }
